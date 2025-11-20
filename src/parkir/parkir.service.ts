@@ -57,7 +57,6 @@ export class ParkirService {
             if (search){
                 where.platNomor = {
                     contains: search,
-                    mode: 'insensitive'
                 };
             }
 
