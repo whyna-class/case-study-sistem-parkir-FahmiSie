@@ -10,18 +10,18 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  // url      = env("DATABASE_URL")
 }
 
 enum jenisKendaraan {
-  RODA2
-  RODA4
+  roda2
+  roda4
 }
 
 model Parkir {
   id               Int            @id @default(autoincrement())
   platNomor        String
-  jenisKendaraan   jenisKendaraan
+  jenisKendaraan   jenisKendaraan 
   durasi           Int
   total            Int
   createdAt        DateTime       @default(now())
